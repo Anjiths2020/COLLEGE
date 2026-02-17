@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HOME PAGE</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            /* background: black; */
+        }
+        *{
+            /* outline: 2px solid red; */
+        }
+        .nav-login{
+            display: flex;
+            justify-content: flex-end;
+            padding: 10px 20px;
+        }
+
+        .nav-login a{
+            text-decoration: none;
+            color: black;
+            font-size: 18px;
+        }
+
+        .nav-navbar{
+            background-color: rgb(170, 148, 148);
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .nav-navbar ul{
+            list-style: none;
+            display: flex;
+            gap: 30px;
+            padding: 0;
+            margin: 0;
+        }
+
+        .nav-navbar a{
+            text-decoration: none;
+            color: black;
+            font-size: 18px;
+        }
+
+        .dropdown{
+            position: relative;
+            z-index: 1;
+        }
+
+        .dropdown-content{
+            position: absolute;
+            opacity: 0;
+            pointer-events: none;
+            transform: translateY(10px);
+            transition: 0.3s ease;
+            background-color: white;
+            border-radius: 8px;
+            padding: 5px 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .dropdown-content a{
+            padding: 8px 15px;
+            font-size: 16px;
+        }
+
+        .dropdown:hover .dropdown-content{
+            opacity: 1;
+            pointer-events: auto;
+            transform: translateY(0);
+        }
+        .dropdown-content a:hover{
+            background-color: lightgray;
+        }
+        .home-image img{
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            animation: slide 1s ease-out forwards;
+        }
+
+        @keyframes slide{
+            from{
+                transform: translateY(-100px);
+                opacity: 0;
+            }
+            to{
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }   
+        .intro{
+            max-width: 850px;
+            margin: 50px auto;
+            text-align: center;
+            font-size: 18px;
+            padding: 10px;
+        }
+
+        .intro h2{
+            margin-bottom: 10px;
+            text-align: left;
+        }
+        .News{
+            max-width: 1500px;
+            margin: 20px auto;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            /* background-image: linear-gradient(to right, #f9f9f9, #7f41ab); */
+        }
+        .News img,ul{
+            display: inline-block;
+            vertical-align: top;
+            margin: 10px;
+        }
+        .News h2{
+            text-align: center;
+            width: 100%;
+        }
+        .News ul{
+            list-style-type: none;
+            padding-left: 20px;
+            /* display: ; */
+        }
+        .News img{
+            height: 500px;
+            width: 700px;
+        }
+        .News li{
+            margin: 8px;
+            font-size: 30px;
+            line-height: 2;
+            animation: new 1s ease-out forwards;
+        }
+
+        @keyframes new{
+            from {
+                transform: translateX(50px);
+                opacity: 0;
+            }
+            to{
+                transform: translateX(0);
+                opacity: 1;
+                /* background-color: tomato; */
+            }
+        }
+        .all-prog{
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+            height: 300px;
+            /* box-shadow: 0 0 10px rgba(0,0,0,0.1); */
+            /* border: black 1px solid; */
+        }
+        .ug, .pg, .bVoc{
+            width: 30%;
+            background-color: lightgray;
+            border-radius: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .ug{
+            
+            background-image: url("student 1.jpg");
+            background-size: cover;
+        }
+        .ug:hover, .pg:hover, .bVoc:hover{
+            transform: scale(1.05);
+            transition: 0.3s ease;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="nav-login">
+        <a href="#">Login</a>
+    </nav>
+
+    <h1 style="text-align:left;margin-left: 20px;">ANJITH'S COLLEGE OF EVERYTHING</h1>
+
+    <nav class="nav-navbar">
+        <ul>
+            <li class="dropdown">
+                <a href="#">Home</a>
+                <div class="dropdown-content">
+                    <!-- <a href="#"></a> -->
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#">About</a>
+                <div class="dropdown-content">
+                    <a href="#">FACUALTY MEMBERS</a>
+                    <a href="#">HISTORY</a>
+                    <a href="#">ACHIEVEMENTS</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#">Departments</a>
+                <div class="dropdown-content">
+                    <a href="#">CSE</a>
+                    <a href="#">ECE</a>
+                    <a href="#">MECH</a>
+                    <a href="#">CIVIL</a>
+                </div>
+            </li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <div class="home-image">
+        <img src="college main.jpg" alt="College Image">
+    </div>
+
+    <div class="intro">
+        <h2>Welcome to Anjith's College of Everything</h2>
+        <p>
+            Anjith's College of Everything is a premier institution dedicated to providing quality education and fostering innovation...
+        </p>
+    </div>
+    <session>
+        <div class="News">
+            <div>
+                <h2 style="align-items: center;">Latest News</h2>
+            </div>
+                <img src="CLASS ROMM.jpg">
+            <ul>
+                <li>New research center inaugurated.</li>
+                <li>Annual cultural fest scheduled for next month.</li>
+                <li>Alumni meet planned for December.</li>
+                <li>New courses introduced in Data Science and AI.</li>
+                <li>Campus Wi-Fi upgraded for better connectivity.</li>
+                <li>Sports complex renovation completed.</li>
+                <li>Guest lecture series by industry experts.</li>
+            </ul>
+        </div>
+    </session>
+    <session>
+        <div class="programs">
+            <div>
+                <h2 style="align-items: center;">Our Programs</h2>
+            </div>
+                <!-- <img src="library.jpg"> -->
+            <div class="all-prog">
+                <div class="ug">
+                    UG PROGRAMS
+                    <!-- <img src="student 1.jpg" style="width:50px;height:50px;margin-left:10px;"> -->
+                </div>
+                <div class="pg">
+                    PG PROGRAMS
+                </div>
+                <div class="bVoc">
+                    BVoc PROGRAMS
+                </div>
+            </div>
+        </div>
+    </session>
+</body>
+</html>
