@@ -1,18 +1,82 @@
 <html>
     <head>
         <title>ADMISSION PORTAL</title>
+        <style>
+            /* *{
+                outline: 2px solid red;
+            } */
+            h1{
+                text-align: center;
+            }
+            .application{
+                width: 800px;
+                height: 700px;
+                box-shadow: 0 0 10px black;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                /* justify-content: center; */
+                /* align-self: center; */
+                margin: auto;
+                padding: 20px;
+                border-radius: 10px;
+            }
+            .application input{
+                width: 80%;
+                height: 40px;
+                margin-top: 20px;
+                font-size: 20px;
+                border-radius: 20px;
+                border: 3px solid black;
+                /* border-bottom: 2px solid black; */
+                padding: 20px;
+            }
+            .application input[type="radio"]{
+                /* float: left; */
+                /* display: inline-block; */
+                /* display: grid;
+                 */
+                width: auto;
+                height: auto;
+                margin: 0 5px;
+                /* margin-left: 20px; */
+            }
+            .rad{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 20px;
+            }
+        </style>
     </head>
     <body>
-        <h1>Welcome to the Admission Portal</h1>
-        <p>Please select your program of interest:</p>
+        <h1>Admission Portal</h1>
+        <!-- <p>Please select your program of interest:</p>
         <ul>
-            <li><a href="#"">Student Details</a></li>
-            <li><a href="#"">Personal Details</a></li>
-            <li><a href="#"">Academic Details</a></li>
-        </ul>
-        <form>
+            <li><a href="#">Student Details</a></li>
+            <li><a href="#">Personal Details</a></li>
+            <li><a href="#">Academic Details</a></li>
+        </ul> -->
+        <form class="application">
             <input type="text" placeholder="Enter your name">
-            
+            <input type="number" placeholder="age">
+            <input type="date" placeholder="DOB">
+            <div class="rad">
+                <label>Gender
+                    <input type="radio" name="gender" value="male"> Male
+                </label>
+                <label>
+                    <input type="radio" name="gender" value="female"> Female
+                </label>
+            </div>
+            <input type="text" placeholder="address">
+            <input type="text" placeholder="fathers name">
+            <input type="text" placeholder="mothers name">
+            <input type="text" placeholder="caste">
+            <input type="text" placeholder="religion">
+            <input type="text" placeholder="education qualification">
+            <!-- details -->
+
         </form>
     </body>
 </html>
