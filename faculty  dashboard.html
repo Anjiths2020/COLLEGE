@@ -1,0 +1,74 @@
+<html>
+  <head>
+    <title>facuality dashboard</title>
+    <style>
+      .dashboard{
+        display: flex;
+      }
+      .side_nav_div{
+        margin-top: 0px;
+        width: 30%;
+        box-shadow: 2px 2px 2px 2px grey;
+        height: 100vh;
+      }
+      .side_nav_ul{
+        list-style: none;
+      }
+      .side_nav_ul li{
+        padding: 10px;
+      }
+      .side_nav_ul li a{
+        text-decoration: none;
+        font-size: 20px;
+        color: #000;
+      }
+      .dashboard-content{
+        display: grid;
+        grid-template-columns:repeat(3, 1fr);
+        border: 2px solid black;
+        
+        width: 75%;
+      }
+      .today-classes,.total-students,.total-classes,.pending-tasks
+      {
+        width: 290px;
+        height: 300px;
+        box-shadow:2px 2px 2px 2px black;
+        margin: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="dashboard">
+      <div class="side_nav_div">
+        <ul class="side_nav_ul">
+          <li><a href="#">Dashboard</a></li>
+          <li><a href="#">My Profile</a></li>
+          <li><a href="#">My Classes/Subjects</a></li>
+          <li><a href="#">Take Attendence</a></li>
+          <li><a href="#">Attendence Report</a></li>
+          <li><a href="#">Upload Marks</a></li>
+          <li><a href="#">Marks Report</a></li>
+          <li><a href="#">Upload Notes</a></li>
+          <li><a href="#">Announcements</a></li>
+          <li><a href="#">Students List</a></li>
+          <li><a href="#">Change Password</a></li>
+        </ul>
+      </div>
+      <div class="dashboard-content">
+        <div class="today-classes">
+          <p>Working Hours</p>
+        </div>
+        <div class="total-students">
+          <p>TOTAL STUDENTS</p>
+        </div>
+        <div class="total-classes">
+          <p>Total Classes</p>
+        </div>
+        <div class="pending-tasks">
+          <p>Pending Tasks</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
